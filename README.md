@@ -18,4 +18,4 @@ Config can be modified in the `config` directory to change the hyperparameters, 
 
 You can find the result of the experiments in the https://wandb.ai/ via the following links: https://wandb.ai/zhangjingze21/IAI-project2/
 
-
+You need to process the dataset before you run my code. And you can also find the dataset via emailing me. My personal email is zhangjingze21@gmail.com

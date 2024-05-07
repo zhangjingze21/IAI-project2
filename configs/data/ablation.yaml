@@ -5,4 +5,4 @@ num_workers: 4
 width: 256
 height: 256
 pin_memory: False
-decline_rate: [0.02, 0.02, 0.02, 1.0, 1.0, 1.0]
+decline_rate: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]

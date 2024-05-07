@@ -1,0 +1,7 @@
+_target_: src.data.datamodule.DataModule
+data_dir: ${paths.data_dir}
+batch_size: 64 # Needs to be divisible by the number of devices (e.g., if in a distributed setup)
+num_workers: 4
+width: 256
+height: 256
+pin_memory: False

@@ -1,0 +1,34 @@
+_target_: src.models.classifer.ClassiferLitModule
+
+optimizer:
+  _target_: torch.optim.Adam
+  _partial_: true
+  lr: 0.001
+  weight_decay: 0.0
+
+  # _target_: torch.optim.SGD
+  # _partial_: true
+  # lr: 0.03
+  # weight_decay: 0.0
+
+  # _target_: torch.optim.AdamW
+  # _partial_: true
+  # lr: 0.001
+  # weight_decay: 0.0
+
+
+scheduler:
+  _target_: torch.optim.lr_scheduler.ReduceLROnPlateau
+  _partial_: true
+  mode: min
+  factor: 0.1
+  patience: 10
+
+net:
+  _target_: src.models.components.cnn.AlexNet
+  # _target_: src.models.components.mobilenet.MobileNet
+  # _target_: src.models.components.mlp.MLP
+  # _target_: src.models.components.resnet.ResNet50_pretrained
+
+# compile model for faster training with pytorch 2.0
+compile: false

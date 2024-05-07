@@ -1,0 +1,18 @@
+# @package _global_
+
+defaults:
+  - _self_
+  - data: datamodule # choose datamodule with `test_dataloader()` for evaluation
+  - model: classifier
+  - logger: wandb
+  - trainer: gpu
+  - paths: default
+  - extras: default
+  - hydra: default
+
+task_name: "eval"
+
+tags: ["dev"]
+
+# passing checkpoint path is necessary for evaluation
+ckpt_path: /home/stu5/scratch/dev/learning/IAI/pro2/project2/logs/train/runs/2024-05-06_16-36-56/checkpoints/epoch_046.ckpt
